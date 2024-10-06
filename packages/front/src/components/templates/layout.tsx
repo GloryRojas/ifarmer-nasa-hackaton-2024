@@ -10,9 +10,6 @@ interface LayoutProps {
 const libraries = ['places', 'geometry'];
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-  console.log('holiii');
-  
-  console.log('variable',import.meta.env.VITE_GOOGLE_MAPS_API_KEY );
   
   return (
     <Box
