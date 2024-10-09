@@ -26,8 +26,9 @@ const GoogleMapWithMarkerControl: React.FC<GoogleMapWithMarkerControlProps> = ({
 		useState<google.maps.LatLngLiteral | null>(null);
 	const [isMarkerMode, setIsMarkerMode] = useState(false);
 	const autocompleteRef = useRef<google.maps.places.Autocomplete | null>(null);
-	const [literalLocation, setLiteralLocation] =
-		useState<google.maps.LatLng | null>(null);
+	const [literalLocation, setLiteralLocation] = 
+    useState<google.maps.LatLng>(new google.maps.LatLng(center.lat, center.lng));
+
 
 	const handleLoadMap = (mapInstance: google.maps.Map) => {
 		setMap(mapInstance);
